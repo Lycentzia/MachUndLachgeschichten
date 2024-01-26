@@ -18,18 +18,22 @@ func start(pos):
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
+		$AnimatedSprite2D.animation = "right"
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
+		$AnimatedSprite2D.animation = "left"
 		velocity.x -= 1
 	if Input.is_action_pressed("move_down"):
+		$AnimatedSprite2D.animation = "down"
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
+		$AnimatedSprite2D.animation = "up"
 		velocity.y -= 1
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
-	#else:
+	else:
 		$AnimatedSprite2D.stop()
 	
 	position += velocity * delta
