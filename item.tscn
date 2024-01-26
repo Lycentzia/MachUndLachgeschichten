@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cci5s3aoqwcyy"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_47slg"]
+[ext_resource type="Texture2D" uid="uid://dg1asetisaj4i" path="res://icon.svg" id="1_togdx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1y5cf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_togdx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o0xnq"]
+
+[node name="Item" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 1.66533e-16
+script = ExtResource("1_47slg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1y5cf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_o0xnq")
