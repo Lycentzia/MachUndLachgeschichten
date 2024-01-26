@@ -77,7 +77,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gukxp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ctbl"]
+radius = 108.0
+height = 220.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bnb5o"]
 animations = [{
@@ -100,6 +102,7 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
+position = Vector2(30, 34)
 script = ExtResource("1_xkq3e")
 metadata/_edit_group_ = true
 
@@ -107,13 +110,15 @@ metadata/_edit_group_ = true
 texture_filter = 1
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_f4etb")
-animation = &"down"
+animation = &"left"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_gukxp")
+shape = SubResource("CapsuleShape2D_5ctbl")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="AnimatedSprite2D_star" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_bnb5o")

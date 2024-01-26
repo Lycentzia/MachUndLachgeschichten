@@ -15,6 +15,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o0xnq"]
+radius = 48.0
+height = 98.0
 
 [node name="Item" type="RigidBody2D"]
 collision_mask = 0
@@ -22,6 +24,7 @@ gravity_scale = 1.66533e-16
 script = ExtResource("1_47slg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_1y5cf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
