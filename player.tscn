@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d27voce8yifsv"]
+[gd_scene load_steps=21 format=3 uid="uid://d27voce8yifsv"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_xkq3e"]
 [ext_resource type="Texture2D" uid="uid://tu1jdogb2qod" path="res://assets/mouse/down_1.png" id="2_adglf"]
@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://028bfdlihon7" path="res://assets/mouse/left_2.png" id="6_3m1hi"]
 [ext_resource type="Texture2D" uid="uid://dwtdwvf6sf4pp" path="res://assets/mouse/right_3.png" id="7_4qyeo"]
 [ext_resource type="Texture2D" uid="uid://jke8t04hckp8" path="res://assets/mouse/left_3.png" id="7_6fn8d"]
+[ext_resource type="Texture2D" uid="uid://b4kngng2kflsl" path="res://assets/star/star_1.png" id="14_f4u78"]
+[ext_resource type="Texture2D" uid="uid://b5xq0cn26fy6q" path="res://assets/star/star_2.png" id="15_g048x"]
+[ext_resource type="Texture2D" uid="uid://ud1aungsyv2h" path="res://assets/star/star_3.png" id="16_vih7x"]
+[ext_resource type="Texture2D" uid="uid://bpcskesxkr8gr" path="res://assets/star/star_4.png" id="17_1umnr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f4etb"]
 animations = [{
@@ -75,6 +79,26 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gukxp"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_bnb5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_f4u78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g048x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vih7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1umnr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="Area2D"]
 script = ExtResource("1_xkq3e")
 metadata/_edit_group_ = true
@@ -88,3 +112,9 @@ speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_gukxp")
+
+[node name="AnimatedSprite2D_star" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bnb5o")
+frame_progress = 0.674711

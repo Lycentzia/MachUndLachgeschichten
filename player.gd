@@ -29,6 +29,13 @@ func _process(delta):
 	if Input.is_action_pressed("move_up"):
 		$AnimatedSprite2D.animation = "up"
 		velocity.y -= 1
+	
+	if Input.is_action_pressed("action"):
+		$AnimatedSprite2D_star.show()
+		$AnimatedSprite2D_star.play()
+	else:
+		$AnimatedSprite2D_star.stop()
+		$AnimatedSprite2D_star.hide()
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
