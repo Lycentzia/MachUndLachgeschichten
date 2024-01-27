@@ -34,10 +34,9 @@ func _process(delta):
 			Globals.levels_finished += 1
 			$Camera2D.add_trauma(1)
 			$Player.is_confused = true
-			$Timer.start()
+			$Laughter.play()
 
-
-func _on_timer_timeout():
+func _on_laughter_finished():
 	if (Globals.levels_finished < 3):
 		get_tree().change_scene_to_file("res://continueScreen.tscn")
 	else:

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8sdkc0slrnuh"]
+[gd_scene load_steps=7 format=3 uid="uid://b8sdkc0slrnuh"]
 
 [ext_resource type="PackedScene" uid="uid://d27voce8yifsv" path="res://player.tscn" id="1_5vosc"]
 [ext_resource type="PackedScene" uid="uid://bustwmo2f05gn" path="res://trashcan.tscn" id="2_ucstj"]
 [ext_resource type="Script" path="res://level_1.gd" id="3_tnx0y"]
 [ext_resource type="PackedScene" uid="uid://dq7oddqwucw6y" path="res://camera_2d.tscn" id="4_4qqf2"]
 [ext_resource type="PackedScene" uid="uid://dp2xy82m4xl16" path="res://boss.tscn" id="5_s6lwy"]
+[ext_resource type="PackedScene" uid="uid://il3oh3t5sf00" path="res://laughter.tscn" id="6_ls0vx"]
 
 [node name="level1" type="Node2D"]
 script = ExtResource("3_tnx0y")
@@ -14,13 +15,11 @@ z_index = 10
 
 [node name="Trashcan" parent="." instance=ExtResource("2_ucstj")]
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
-
 [node name="Camera2D" parent="." instance=ExtResource("4_4qqf2")]
 
 [node name="Boss" parent="." instance=ExtResource("5_s6lwy")]
 modulate = Color(1, 1, 1, 0.0392157)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="Laughter" parent="." instance=ExtResource("6_ls0vx")]
+
+[connection signal="finished" from="Laughter" to="." method="_on_laughter_finished"]

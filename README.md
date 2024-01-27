@@ -17,6 +17,9 @@
 * boss
   * https://opengameart.org/content/pixel-art-elephant-with-costumes-and-accesories
   * Public Domain (CC0)
+* laughter
+  * https://opengameart.org/content/evil-laugh
+  * Public Domain (CC0)  
 
 ## godot stuff
 
