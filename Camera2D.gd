@@ -9,6 +9,8 @@ var target  # Assign the node this camera will follow.
 var trauma = 0.0  # Current shake strength.
 var trauma_power = 2  # Trauma exponent. Use [2, 3].
 
+var target_zoom = Vector2(1,1)
+
 func _ready():
 	randomize()
 
@@ -21,6 +23,10 @@ func _process(delta):
 	if trauma:
 		trauma = max(trauma - decay * delta, 0)
 		shake()
+	if target_zoom > zoom:
+		zoom = zoom * 1.01
+	if target_zoom < zoom:
+		zoom = zoom * 0.99
 		
 func shake():
 	var amount = pow(trauma, trauma_power)

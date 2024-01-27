@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://du7o1vb2gpok2"]
+
+[ext_resource type="PackedScene" uid="uid://dq7oddqwucw6y" path="res://camera_2d.tscn" id="1_6q36i"]
+[ext_resource type="Script" path="res://end_screen.gd" id="1_grrku"]
+[ext_resource type="PackedScene" uid="uid://d27voce8yifsv" path="res://player.tscn" id="2_cd6tt"]
+[ext_resource type="PackedScene" uid="uid://dp2xy82m4xl16" path="res://boss.tscn" id="4_he6of"]
+
+[node name="end_screen" type="Node2D"]
+script = ExtResource("1_grrku")
+
+[node name="Camera2D" parent="." instance=ExtResource("1_6q36i")]
+
+[node name="Player" parent="." instance=ExtResource("2_cd6tt")]
+z_index = 100
+
+[node name="Boss" parent="." instance=ExtResource("4_he6of")]

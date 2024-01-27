@@ -14,6 +14,9 @@
 * emotes
   * https://opengameart.org/content/animated-emote-bubbles
   * Public Domain (CC0)
+* boss
+  * https://opengameart.org/content/pixel-art-elephant-with-costumes-and-accesories
+  * Public Domain (CC0)
 
 ## godot stuff
 

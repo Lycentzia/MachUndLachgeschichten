@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp2xy82m4xl16"]
+
+[ext_resource type="Script" path="res://boss.gd" id="1_dw1et"]
+[ext_resource type="Texture2D" uid="uid://bglmwjumnqq8n" path="res://assets/boss.png" id="2_n7ni1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvsb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n7ni1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Boss" type="Area2D"]
+script = ExtResource("1_dw1et")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_dvsb3")
