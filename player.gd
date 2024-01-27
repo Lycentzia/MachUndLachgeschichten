@@ -51,11 +51,13 @@ func _physics_process(delta):
 		for item in get_overlapping_bodies():
 			item.get_parent().remove_child(item)
 			add_child(item)
+			item.visible = 0
 	else:
 		for item in get_children():
 			if item is RigidBody2D:
 				remove_child(item)
 				get_node("/root").add_child(item)
 				item.position = position
+				item.visible = 1
 
 		
