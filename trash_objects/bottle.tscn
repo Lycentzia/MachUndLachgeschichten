@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://hocxj2m16cuv" path="res://assets/trash/greenbootle.png" id="2_yg4c1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
-radius = 39.0
+radius = 25.0
 height = 128.0
 
 [node name="StaticBody2D" type="RigidBody2D"]

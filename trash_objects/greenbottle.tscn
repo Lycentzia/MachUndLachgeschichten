@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dypfkgoher4ql" path="res://assets/trash/bottle.png" id="2_fogh0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
-radius = 39.0
-height = 128.0
+radius = 27.0
+height = 124.0
 
 [node name="StaticBody2D" type="RigidBody2D"]
 gravity_scale = 0.0

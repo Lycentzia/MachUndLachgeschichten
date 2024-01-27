@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bna8pl55604p1" path="res://assets/trash/tunacan.png" id="2_0472q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
-radius = 39.0
-height = 128.0
+radius = 38.0
+height = 82.0
 
 [node name="StaticBody2D" type="RigidBody2D"]
 gravity_scale = 0.0
