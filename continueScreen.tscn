@@ -1,23 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceqg5urom7bgj"]
+[gd_scene load_steps=5 format=3 uid="uid://ceqg5urom7bgj"]
 
 [ext_resource type="Script" path="res://randomText.gd" id="1_0ipts"]
+[ext_resource type="Script" path="res://continueScreen.gd" id="1_w7yif"]
 [ext_resource type="Script" path="res://Button.gd" id="2_ebyt2"]
 [ext_resource type="PackedScene" path="res://laughter.tscn" id="3_en50j"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_w7yif")
 
 [node name="Jokes" type="RichTextLabel" parent="."]
-offset_left = 127.0
-offset_top = 148.0
-offset_right = 720.0
-offset_bottom = 229.0
+offset_left = -295.0
+offset_top = -128.0
+offset_right = 298.0
+offset_bottom = -1.0
+theme_override_font_sizes/normal_font_size = 32
 script = ExtResource("1_0ipts")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 365.0
-offset_right = 468.0
-offset_bottom = 396.0
+offset_left = -30.0
+offset_top = 26.0
+offset_right = 30.0
+offset_bottom = 57.0
 text = "HA HA"
 script = ExtResource("2_ebyt2")
 
