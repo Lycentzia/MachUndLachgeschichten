@@ -54,7 +54,7 @@ func _physics_process(delta):
 			item.visible = 0
 	else:
 		for item in get_children():
-			if item is RigidBody2D:
+			if item is StaticBody2D:
 				remove_child(item)
 				get_node("/root").add_child(item)
 				item.position = position
