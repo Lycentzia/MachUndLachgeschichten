@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6rnacmrd676w"]
+[gd_scene load_steps=4 format=3 uid="uid://b82stthsj65nt"]
 
-[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_xyvjr"]
-[ext_resource type="Texture2D" uid="uid://hocxj2m16cuv" path="res://assets/trash/greenbootle.png" id="2_yg4c1"]
+[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_i8w65"]
+[ext_resource type="Texture2D" uid="uid://brec26j8pr52x" path="res://assets/trash/papercup.png" id="2_cnlnc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
 radius = 39.0
@@ -9,11 +9,11 @@ height = 128.0
 
 [node name="StaticBody2D" type="RigidBody2D"]
 gravity_scale = 0.0
-script = ExtResource("1_xyvjr")
+script = ExtResource("1_i8w65")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("2_yg4c1")
+texture = ExtResource("2_cnlnc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_kbnx2")

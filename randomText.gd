@@ -9,7 +9,7 @@ var arrayWithJokes = [
 	"Warum klaut Robin Hood Deodorant? – Um es unter den Armen zu verteilen",
 	"Wie nennt man den Flur eines Iglus? – Eisdiele.",
 	"Was ist das Lieblingsessen von Models? –Laufsteaks",
-	"Heute wurde jemand mit einer Sallerie mitten auf er Straße erschlagen, war wohl jemand von den Health Angels."
+	"Heute wurde jemand mit einer Sellerie mitten auf der Straße erschlagen, war wohl jemand von den Health Angels."
 ]
 
 # Called when the node enters the scene tree for the first time.
