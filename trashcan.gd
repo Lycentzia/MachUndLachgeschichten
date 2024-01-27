@@ -3,6 +3,7 @@ var trash_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AnimatedSprite2D.animation = "sad"
 	set_position(Vector2(randf(), randf()) * (get_viewport_rect().size - Vector2(20,20)) + Vector2(10,10))
 
 

@@ -14,8 +14,6 @@ func _ready():
 	object_pool.append(object_banana)
 	object_pool.append(object_mug)	
 	
-	print(object_pool)
-	
 	for i in object_pool : 
 		spawn_trash_objects(i)
 
@@ -25,5 +23,6 @@ func spawn_trash_objects(object):
 	newobject.set_position(Vector2(randf(), randf()) * (get_viewport_rect().size - Vector2(20,20)) + Vector2(10,10))
 	get_parent().add_child(newobject)
 
-
-
+func _process(delta):
+	if $Trashcan.trash_score == object_pool.size():
+		$Trashcan/AnimatedSprite2D.animation = "happy"

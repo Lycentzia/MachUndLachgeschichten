@@ -8,3 +8,6 @@
 * star
   * https://opengameart.org/content/4-space-stars
   * Public Domain (CC0)
+* trashcan
+  * https://opengameart.org/content/trash-sprites
+  * Creative Commons Attribution (CC BY) version 3.0
