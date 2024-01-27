@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6jmobspwffqg"]
-
-[ext_resource type="Texture2D" uid="uid://8kh6p0iobahb" path="res://assets/trash.png" id="1_fjd7c"]
-
-[node name="Area2D" type="Area2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
-texture = ExtResource("1_fjd7c")

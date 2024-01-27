@@ -1,7 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cci5s3aoqwcyy"]
+[gd_scene load_steps=5 format=3 uid="uid://07qwvvfyhjnx"]
 
-[ext_resource type="Script" path="res://item.gd" id="1_47slg"]
 [ext_resource type="Texture2D" uid="uid://dg1asetisaj4i" path="res://icon.svg" id="1_togdx"]
+
+[sub_resource type="GDScript" id="GDScript_hho8b"]
+script/source = "extends RigidBody2D
+var screen_size # Size of the game window.
+var player
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	screen_size = get_viewport_rect().size
+	position = randf() * screen_size
+	
+	player = get_node(\"../Player\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1y5cf"]
 animations = [{
@@ -21,7 +37,7 @@ height = 98.0
 [node name="Item" type="RigidBody2D"]
 collision_mask = 0
 gravity_scale = 1.66533e-16
-script = ExtResource("1_47slg")
+script = SubResource("GDScript_hho8b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
