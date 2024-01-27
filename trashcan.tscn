@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://trashcan.gd" id="1_cr2pt"]
 [ext_resource type="Texture2D" uid="uid://dad00va5rfk5g" path="res://assets/trashcan/trashcan_happy.png" id="2_g8myr"]
-[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_bottom_left.png" id="2_y6y7h"]
-[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_bottom_right.png" id="3_2j8rr"]
+[ext_resource type="Texture2D" uid="uid://v3b56y0jduir" path="res://assets/trashcan/trashcan_bottom_left.png" id="2_y6y7h"]
+[ext_resource type="Texture2D" uid="uid://b2g0r36yf4nfs" path="res://assets/trashcan/trashcan_bottom_right.png" id="3_2j8rr"]
 [ext_resource type="Texture2D" uid="uid://ddhyx0qs00qlf" path="res://assets/trashcan/trashcan_sad.png" id="3_gffs2"]
-[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_top_left.png" id="6_ighv3"]
-[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_top_right.png" id="7_fdehs"]
+[ext_resource type="Texture2D" uid="uid://ccenawlsgx1xe" path="res://assets/trashcan/trashcan_top_left.png" id="6_ighv3"]
+[ext_resource type="Texture2D" uid="uid://b5s5adi6j5xna" path="res://assets/trashcan/trashcan_top_right.png" id="7_fdehs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k2ni3"]
 animations = [{
