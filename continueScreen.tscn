@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://randomText.gd" id="1_0ipts"]
 [ext_resource type="Script" path="res://Button.gd" id="2_ebyt2"]
-[ext_resource type="PackedScene" uid="uid://il3oh3t5sf00" path="res://laughter.tscn" id="3_en50j"]
+[ext_resource type="PackedScene" path="res://laughter.tscn" id="3_en50j"]
 
 [node name="Node2D" type="Node2D"]
 

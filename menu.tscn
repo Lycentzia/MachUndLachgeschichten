@@ -13,11 +13,13 @@ offset_bottom = 426.0
 text = "Start"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 342.0
-offset_top = 121.0
-offset_right = 759.0
-offset_bottom = 208.0
-text = "Mach und Lachgeschichten
+offset_left = 427.0
+offset_top = 200.0
+offset_right = 750.0
+offset_bottom = 326.0
+theme_override_font_sizes/normal_font_size = 39
+text = "MACH- & LACH-
+ GESCHICHTEN
 "
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
