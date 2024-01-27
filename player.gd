@@ -45,3 +45,17 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+
+func _physics_process(delta):
+	if Input.is_action_pressed("action"):
+		for item in get_overlapping_bodies():
+			item.get_parent().remove_child(item)
+			add_child(item)
+	else:
+		for item in get_children():
+			if item is RigidBody2D:
+				remove_child(item)
+				get_node("/root").add_child(item)
+				item.position = position
+
+		
