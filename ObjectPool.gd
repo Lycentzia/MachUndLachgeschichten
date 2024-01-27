@@ -8,6 +8,8 @@ var object_can = load("res://trash_objects/can.tscn")
 var object_mug = load("res://trash_objects/mug.tscn")
 var object_banana = load("res://trash_objects/banana.tscn")
 
+var finished = false
+
 func _ready():
 	object_pool.append(object_bottle)
 	object_pool.append(object_can)
@@ -17,6 +19,7 @@ func _ready():
 	for i in object_pool : 
 		spawn_trash_objects(i)
 
+	$Camera2D.target = $Player
 
 func spawn_trash_objects(object):
 	var newobject = object.instantiate()
@@ -26,3 +29,6 @@ func spawn_trash_objects(object):
 func _process(delta):
 	if $Trashcan.trash_score == object_pool.size():
 		$Trashcan/AnimatedSprite2D.animation = "happy"
+		if (!finished):
+			finished = true
+			$Camera2D.add_trauma(1)
