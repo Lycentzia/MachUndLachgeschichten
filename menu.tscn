@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://r8ersb8trr0x"]
 
-[ext_resource type="Script" path="res://startButton.gd" id="1_pa3nv"]
+[ext_resource type="Script" path="res://Button.gd" id="1_pa3nv"]
 
 [node name="Node2D" type="Node2D"]
 
