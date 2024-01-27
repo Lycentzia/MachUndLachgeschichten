@@ -59,7 +59,7 @@ func _physics_process(delta):
 	else:
 		for item in inventory:
 			remove_child(item)
-			get_node("/root").add_child(item)
+			get_parent().add_child(item)
 			item.position = position
 			item.visible = 1
 		inventory.clear()

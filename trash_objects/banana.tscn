@@ -7,7 +7,8 @@
 radius = 39.0
 height = 142.0
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Banana" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
 script = ExtResource("1_7cagt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
