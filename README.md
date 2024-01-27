@@ -11,6 +11,8 @@
 * trashcan
   * https://opengameart.org/content/trash-sprites
   * Creative Commons Attribution (CC BY) version 3.0
+  * https://opengameart.org/content/metal-sounds
+  * Creative Commons Attribution (CC BY) version 3.0
 * emotes
   * https://opengameart.org/content/animated-emote-bubbles
   * Public Domain (CC0)
@@ -19,7 +21,7 @@
   * Public Domain (CC0)
 * laughter
   * https://opengameart.org/content/evil-laugh
-  * Public Domain (CC0)  
+  * Public Domain (CC0)
 
 ## godot stuff
 
