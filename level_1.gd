@@ -20,7 +20,6 @@ func _ready():
 		spawn_trash_objects(i)
 
 	$Camera2D.target = $Player
-	
 
 func spawn_trash_objects(object):
 	var newobject = object.instantiate()
