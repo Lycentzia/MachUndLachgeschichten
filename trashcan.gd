@@ -1,6 +1,7 @@
 extends Area2D
 var trash_score = 0
 var player
+var clanks
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,6 +9,7 @@ func _ready():
 	set_position(Vector2(randf(), randf()) * (get_viewport_rect().size - Vector2(20,20)) + Vector2(10,10))
 
 	player = get_node("../Player")
+	clanks = [$Clank1, $Clank2, $Clank3]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,3 +31,4 @@ func _physics_process(delta):
 		if !Input.is_action_pressed("action"):
 			item.queue_free()
 			trash_score += 1
+			clanks[randi() % clanks.size()].play()
