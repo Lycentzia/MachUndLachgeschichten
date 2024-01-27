@@ -51,7 +51,7 @@ func _process(delta):
 func _physics_process(delta):
 	if Input.is_action_pressed("action"):
 		for item in get_overlapping_bodies():
-			if (inventory.size() < capacity):
+			if (item.is_trash && inventory.size() < capacity):
 				item.get_parent().remove_child(item)
 				add_child(item)
 				inventory.append(item)

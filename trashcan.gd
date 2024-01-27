@@ -1,13 +1,10 @@
-extends RigidBody2D
-var screen_size # Size of the game window.
-var player
+extends Area2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
-	position = randf() * screen_size
-	
-	player = get_node("../Player")
+	set_position(Vector2(randf(), randf()) * get_viewport_rect().size - Vector2(50,50))
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

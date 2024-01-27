@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bustwmo2f05gn"]
+
+[ext_resource type="Script" path="res://trashcan.gd" id="1_cr2pt"]
+[ext_resource type="Texture2D" uid="uid://8kh6p0iobahb" path="res://assets/trash.png" id="2_38vt2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m2k01"]
+radius = 27.0
+height = 68.0
+
+[node name="Trashcan" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_cr2pt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_38vt2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_m2k01")
