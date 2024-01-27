@@ -4,6 +4,7 @@ extends Area2D
 var screen_size # Size of the game window.
 var inventory = []
 var capacity = 1
+var is_confused = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -47,6 +48,13 @@ func _process(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	if (is_confused):
+		$AnimatedSprite2D_confusion.show()
+		$AnimatedSprite2D_confusion.play()
+	else:
+		$AnimatedSprite2D_confusion.hide()
+		$AnimatedSprite2D_confusion.stop()
 
 func _physics_process(delta):
 	if Input.is_action_pressed("action"):

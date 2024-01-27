@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d27voce8yifsv"]
+[gd_scene load_steps=30 format=3 uid="uid://d27voce8yifsv"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_xkq3e"]
 [ext_resource type="Texture2D" uid="uid://tu1jdogb2qod" path="res://assets/mouse/down_1.png" id="2_adglf"]
@@ -17,6 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://b5xq0cn26fy6q" path="res://assets/star/star_2.png" id="15_g048x"]
 [ext_resource type="Texture2D" uid="uid://ud1aungsyv2h" path="res://assets/star/star_3.png" id="16_vih7x"]
 [ext_resource type="Texture2D" uid="uid://bpcskesxkr8gr" path="res://assets/star/star_4.png" id="17_1umnr"]
+[ext_resource type="Texture2D" uid="uid://blhianuyxma7p" path="res://assets/emotes/confusion/1.png" id="18_6v7x7"]
+[ext_resource type="Texture2D" uid="uid://pxlpg1kpgpmt" path="res://assets/emotes/confusion/2.png" id="19_2yvag"]
+[ext_resource type="Texture2D" uid="uid://dpfabbox7pn7j" path="res://assets/emotes/confusion/3.png" id="20_0ry8h"]
+[ext_resource type="Texture2D" uid="uid://cbdfkftsou3d8" path="res://assets/emotes/confusion/4.png" id="21_qj2dc"]
+[ext_resource type="Texture2D" uid="uid://ms1r5vrut3ny" path="res://assets/emotes/confusion/5.png" id="22_sghb8"]
+[ext_resource type="Texture2D" uid="uid://chygl5bvv3qa1" path="res://assets/emotes/confusion/6.png" id="23_dkime"]
+[ext_resource type="Texture2D" uid="uid://clmmodtv04kmx" path="res://assets/emotes/confusion/7.png" id="24_sevss"]
+[ext_resource type="Texture2D" uid="uid://dlf0p4jn1fmig" path="res://assets/emotes/confusion/8.png" id="25_cqwrp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f4etb"]
 animations = [{
@@ -101,6 +109,38 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ven7m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_6v7x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2yvag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0ry8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qj2dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sghb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dkime")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_sevss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cqwrp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="Area2D"]
 position = Vector2(30, 34)
 script = ExtResource("1_xkq3e")
@@ -123,3 +163,11 @@ texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_bnb5o")
 frame_progress = 0.674711
+
+[node name="AnimatedSprite2D_confusion" type="AnimatedSprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_ven7m")
+frame_progress = 0.578895
+offset = Vector2(2.08165e-12, -20)

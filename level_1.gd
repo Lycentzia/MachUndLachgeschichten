@@ -33,6 +33,7 @@ func _process(delta):
 		if (!finished):
 			finished = true
 			$Camera2D.add_trauma(1)
+			$Player.is_confused = true
 			$Timer.start()
 
 
