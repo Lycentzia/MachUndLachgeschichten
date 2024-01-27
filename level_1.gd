@@ -14,7 +14,7 @@ func _ready():
 	object_pool.append(object_bottle)
 	object_pool.append(object_can)
 	object_pool.append(object_banana)
-	object_pool.append(object_mug)	
+	object_pool.append(object_mug)
 	
 	for i in object_pool : 
 		spawn_trash_objects(i)
@@ -31,11 +31,14 @@ func _process(delta):
 		$Trashcan/AnimatedSprite2D.animation = "happy"
 		if (!finished):
 			finished = true
+			Globals.levels_finished += 1
 			$Camera2D.add_trauma(1)
 			$Player.is_confused = true
 			$Timer.start()
 
 
 func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://continueScreen.tscn")
-#	get_tree().change_scene_to_file("res://end_screen.tscn")
+	if (Globals.levels_finished < 3):
+		get_tree().change_scene_to_file("res://continueScreen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://end_screen.tscn")
