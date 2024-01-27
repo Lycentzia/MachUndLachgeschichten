@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bustwmo2f05gn" path="res://trashcan.tscn" id="2_ucstj"]
 [ext_resource type="Script" path="res://level_1.gd" id="3_tnx0y"]
 [ext_resource type="PackedScene" uid="uid://dq7oddqwucw6y" path="res://camera_2d.tscn" id="4_4qqf2"]
-[ext_resource type="PackedScene" uid="uid://cfp2j22tvqw1x" path="res://boss.tscn" id="5_s6lwy"]
+[ext_resource type="PackedScene" uid="uid://dp2xy82m4xl16" path="res://boss.tscn" id="5_s6lwy"]
 
 [node name="level1" type="Node2D"]
 script = ExtResource("3_tnx0y")
