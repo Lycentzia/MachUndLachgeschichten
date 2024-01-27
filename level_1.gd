@@ -1,6 +1,7 @@
 extends Node2D
 
 var object_pool : Array = []
+var numbers = 0
 
 var object_bottle = load("res://trash_objects/bottle.tscn")
 var object_greenbottle = load("res://trash_objects/greenbottle.tscn")
@@ -39,10 +40,15 @@ func _ready():
 	object_pool.append(object_washingagent)
 	object_pool.append(object_waterbottle)
 	
-	for i in object_pool : 
-		spawn_trash_objects(i)
+	
+	for i in Globals.trashNumber : 
+		var random_object_number = randi() % object_pool.size()
+		spawn_trash_objects(object_pool[random_object_number])
+		object_pool.remove_at(random_object_number)
 
 	$Camera2D.target = $Player
+	
+
 
 func spawn_trash_objects(object):
 	var newobject = object.instantiate()
@@ -50,11 +56,12 @@ func spawn_trash_objects(object):
 	get_parent().add_child(newobject)
 
 func _process(delta):
-	if $Trashcan.trash_score == object_pool.size():
+	if $Trashcan.trash_score == Globals.trashNumber:
 		$Trashcan/AnimatedSprite2D.animation = "happy"
 		if (!finished):
 			finished = true
 			Globals.levels_finished += 1
+			Globals.trashNumber +=1
 			$Camera2D.add_trauma(1)
 			$Player.is_confused = true
 			$Timer.start()

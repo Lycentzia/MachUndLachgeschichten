@@ -1,6 +1,7 @@
 extends Node
 
 var levels_finished = 0
+var trashNumber = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
