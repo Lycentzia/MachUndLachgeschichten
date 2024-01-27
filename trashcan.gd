@@ -3,7 +3,7 @@ var trash_score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_position(Vector2(randf(), randf()) * get_viewport_rect().size - Vector2(50,50))
+	set_position(Vector2(randf(), randf()) * (get_viewport_rect().size - Vector2(20,20)) + Vector2(10,10))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

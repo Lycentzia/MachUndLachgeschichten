@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0qf8vcl2il3o"
-path="res://.godot/imported/banana.png-004fbf40376422814e17da34febc9cf8.ctex"
+uid="uid://dypfkgoher4ql"
+path="res://.godot/imported/bottle.png-86b255bbc68a1e0614759060730504da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/banana.png"
-dest_files=["res://.godot/imported/banana.png-004fbf40376422814e17da34febc9cf8.ctex"]
+source_file="res://assets/trash/bottle.png"
+dest_files=["res://.godot/imported/bottle.png-86b255bbc68a1e0614759060730504da.ctex"]
 
 [params]
 
