@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://de5vn1c31dim"]
+[gd_scene load_steps=4 format=3 uid="uid://de5vn1c31dim"]
 
 [ext_resource type="Texture2D" uid="uid://5alcjraras24" path="res://assets/trash/can.png" id="1_7j5ss"]
+[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_c5upk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
 radius = 30.0
 height = 104.0
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="StaticBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_c5upk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

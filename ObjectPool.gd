@@ -11,15 +11,13 @@ var object_banana = load("res://trash_objects/banana.tscn")
 func _ready():
 	object_pool.append(object_bottle)
 	object_pool.append(object_can)
-	object_pool.append(object_mug)
 	object_pool.append(object_banana)
+	object_pool.append(object_mug)	
 	
-	var trash_count : int = object_pool.size()	
+	print(object_pool)
 	
-	for i in trash_count : 
-		var random_object_number = randi() % object_pool.size()
-		spawn_trash_objects(object_pool[random_object_number])
-		object_pool.remove_at(random_object_number)
+	for i in object_pool : 
+		spawn_trash_objects(i)
 
 
 func spawn_trash_objects(object):
