@@ -1,21 +1,77 @@
-[gd_scene load_steps=4 format=3 uid="uid://bustwmo2f05gn"]
+[gd_scene load_steps=10 format=3 uid="uid://bustwmo2f05gn"]
 
 [ext_resource type="Script" path="res://trashcan.gd" id="1_cr2pt"]
-[ext_resource type="Texture2D" uid="uid://8kh6p0iobahb" path="res://assets/trash.png" id="2_38vt2"]
+[ext_resource type="Texture2D" uid="uid://dad00va5rfk5g" path="res://assets/trashcan/trashcan_happy.png" id="2_g8myr"]
+[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_bottom_left.png" id="2_y6y7h"]
+[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_bottom_right.png" id="3_2j8rr"]
+[ext_resource type="Texture2D" uid="uid://ddhyx0qs00qlf" path="res://assets/trashcan/trashcan_sad.png" id="3_gffs2"]
+[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_top_left.png" id="6_ighv3"]
+[ext_resource type="Texture2D" path="res://assets/trashcan/trashcan_top_right.png" id="7_fdehs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2ni3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y6y7h")
+}],
+"loop": true,
+"name": &"bottom_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2j8rr")
+}],
+"loop": true,
+"name": &"bottom_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g8myr")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gffs2")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ighv3")
+}],
+"loop": true,
+"name": &"top_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fdehs")
+}],
+"loop": true,
+"name": &"top_right",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m2k01"]
-radius = 17.6667
-height = 45.3333
+radius = 27.0
+height = 68.0
 
 [node name="Trashcan" type="Area2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_cr2pt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_38vt2")
+sprite_frames = SubResource("SpriteFrames_k2ni3")
+animation = &"happy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.66667)
 shape = SubResource("CapsuleShape2D_m2k01")

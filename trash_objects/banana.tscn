@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpfrdbi7og14o"]
+[gd_scene load_steps=4 format=3 uid="uid://mlmqyckgsd8c"]
 
 [ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_7cagt"]
 [ext_resource type="Texture2D" uid="uid://b0qf8vcl2il3o" path="res://assets/trash/banana.png" id="2_m4jda"]
