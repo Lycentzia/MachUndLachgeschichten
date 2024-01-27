@@ -20,6 +20,7 @@ func _ready():
 		spawn_trash_objects(i)
 
 	$Camera2D.target = $Player
+	
 
 func spawn_trash_objects(object):
 	var newobject = object.instantiate()
@@ -32,3 +33,8 @@ func _process(delta):
 		if (!finished):
 			finished = true
 			$Camera2D.add_trauma(1)
+			$Timer.start()
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://menu.tscn")
