@@ -2,6 +2,8 @@ extends Area2D
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var inventory = []
+var capacity = 1
 
 
 # Called when the node enters the scene tree for the first time.
@@ -49,15 +51,17 @@ func _process(delta):
 func _physics_process(delta):
 	if Input.is_action_pressed("action"):
 		for item in get_overlapping_bodies():
-			item.get_parent().remove_child(item)
-			add_child(item)
-			item.visible = 0
+			if (inventory.size() < capacity):
+				item.get_parent().remove_child(item)
+				add_child(item)
+				inventory.append(item)
+				item.visible = 0
 	else:
-		for item in get_children():
-			if item is StaticBody2D:
-				remove_child(item)
-				get_node("/root").add_child(item)
-				item.position = position
-				item.visible = 1
+		for item in inventory:
+			remove_child(item)
+			get_node("/root").add_child(item)
+			item.position = position
+			item.visible = 1
+		inventory.clear()
 
 		
