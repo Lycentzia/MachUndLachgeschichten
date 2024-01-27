@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqmlclwoolhru"]
+
+[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_dweke"]
+[ext_resource type="Texture2D" uid="uid://b6k0vdeyixnhi" path="res://assets/trash/pizza.png" id="2_rmihn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 60.0
+height = 120.0
+
+[node name="StaticBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_dweke")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_rmihn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")

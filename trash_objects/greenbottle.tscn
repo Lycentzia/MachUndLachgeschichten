@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8na721gvnnvu"]
+
+[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_au670"]
+[ext_resource type="Texture2D" uid="uid://dypfkgoher4ql" path="res://assets/trash/bottle.png" id="2_fogh0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 27.0
+height = 124.0
+
+[node name="StaticBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_au670")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_fogh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")

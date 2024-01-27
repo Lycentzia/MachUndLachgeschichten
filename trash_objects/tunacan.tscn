@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://46ekxadup51p"]
+
+[ext_resource type="Script" path="res://trash_objects/trashobjects.gd" id="1_5kjou"]
+[ext_resource type="Texture2D" uid="uid://bna8pl55604p1" path="res://assets/trash/tunacan.png" id="2_0472q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 38.0
+height = 82.0
+
+[node name="StaticBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_5kjou")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_0472q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")
