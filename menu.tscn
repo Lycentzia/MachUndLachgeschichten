@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://r8ersb8trr0x"]
 
-[ext_resource type="Script" path="res://Button.gd" id="1_pa3nv"]
+[ext_resource type="Script" path="res://menu.gd" id="1_182do"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_182do")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 437.0
@@ -10,7 +11,6 @@ offset_top = 395.0
 offset_right = 692.0
 offset_bottom = 426.0
 text = "Start"
-script = ExtResource("1_pa3nv")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 342.0
@@ -20,4 +20,4 @@ offset_bottom = 208.0
 text = "Mach und Lachgeschichten
 "
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

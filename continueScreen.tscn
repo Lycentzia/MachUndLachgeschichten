@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceqg5urom7bgj"]
+[gd_scene load_steps=4 format=3 uid="uid://ceqg5urom7bgj"]
 
 [ext_resource type="Script" path="res://randomText.gd" id="1_0ipts"]
 [ext_resource type="Script" path="res://Button.gd" id="2_ebyt2"]
+[ext_resource type="PackedScene" uid="uid://il3oh3t5sf00" path="res://laughter.tscn" id="3_en50j"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,4 +21,7 @@ offset_bottom = 396.0
 text = "HA HA"
 script = ExtResource("2_ebyt2")
 
+[node name="AudioStreamPlayer" parent="Button" instance=ExtResource("3_en50j")]
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="finished" from="Button/AudioStreamPlayer" to="Button" method="_on_audio_stream_player_finished"]
