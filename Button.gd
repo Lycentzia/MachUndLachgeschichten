@@ -11,4 +11,7 @@ func _process(delta):
 
 
 func _on_pressed():
+	$AudioStreamPlayer.play()
+
+func _on_audio_stream_player_finished():
 	get_tree().change_scene_to_file("res://level_1.tscn")
