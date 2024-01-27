@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6rnacmrd676w"]
+
+[ext_resource type="Texture2D" uid="uid://dypfkgoher4ql" path="res://assets/trash/bottle.png" id="1_vk0j0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 39.0
+height = 142.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_vk0j0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")

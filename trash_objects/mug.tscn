@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bioqtkfvtk8ax"]
+
+[ext_resource type="Texture2D" uid="uid://dd4djis5t1p04" path="res://assets/trash/mug.png" id="1_umiqa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 37.0
+height = 84.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_umiqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")

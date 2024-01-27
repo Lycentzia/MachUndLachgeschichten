@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://de5vn1c31dim"]
+
+[ext_resource type="Texture2D" uid="uid://5alcjraras24" path="res://assets/trash/can.png" id="1_7j5ss"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbnx2"]
+radius = 30.0
+height = 104.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_7j5ss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kbnx2")
