@@ -29,6 +29,9 @@
   * https://opengameart.org/content/recycle-items-set
   * Recycle items art by Clint Bellanger
   * Creative Commons Attribution (CC BY) version 3.0
+* controller
+  * https://opengameart.org/content/controller-input-icons
+  * Public Domain (CC0)
 
 ## godot stuff
 
