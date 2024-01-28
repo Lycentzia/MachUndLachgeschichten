@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dksah0o3ofb7v"]
+[gd_scene load_steps=6 format=3 uid="uid://dksah0o3ofb7v"]
 
 [ext_resource type="Script" path="res://randomText.gd" id="1_0ipts"]
 [ext_resource type="Script" path="res://continueScreen.gd" id="1_w7yif"]
 [ext_resource type="Script" path="res://Button.gd" id="2_ebyt2"]
+[ext_resource type="Texture2D" uid="uid://xk3yggpup3dw" path="res://assets/Vorhang.png" id="2_j1tnj"]
 [ext_resource type="PackedScene" path="res://laughter.tscn" id="3_en50j"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_w7yif")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -768.0
+offset_top = -428.0
+offset_right = 1152.0
+offset_bottom = 652.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_j1tnj")
 
 [node name="Jokes" type="RichTextLabel" parent="."]
 offset_left = -381.0
@@ -18,10 +27,11 @@ bbcode_enabled = true
 script = ExtResource("1_0ipts")
 
 [node name="Button" type="Button" parent="."]
-offset_left = -30.0
-offset_top = 26.0
-offset_right = 30.0
-offset_bottom = 57.0
+offset_left = -87.0
+offset_top = 72.0
+offset_right = 87.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 31
 text = "HA HA"
 script = ExtResource("2_ebyt2")
 

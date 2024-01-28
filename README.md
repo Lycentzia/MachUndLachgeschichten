@@ -32,6 +32,12 @@
 * controller
   * https://opengameart.org/content/controller-input-icons
   * Public Domain (CC0)
+* background (menu)
+  * https://opengameart.org/content/background-night
+  * Public Domain (CC0)
+* background (curtain)
+  * https://opengameart.org/content/curtain
+  * Public Domain (CC0)
 
 ## godot stuff
 
