@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceqg5urom7bgj"]
+[gd_scene load_steps=5 format=3 uid="uid://dksah0o3ofb7v"]
 
 [ext_resource type="Script" path="res://randomText.gd" id="1_0ipts"]
 [ext_resource type="Script" path="res://continueScreen.gd" id="1_w7yif"]
@@ -9,11 +9,12 @@
 script = ExtResource("1_w7yif")
 
 [node name="Jokes" type="RichTextLabel" parent="."]
-offset_left = -295.0
-offset_top = -128.0
-offset_right = 298.0
+offset_left = -381.0
+offset_top = -151.0
+offset_right = 377.0
 offset_bottom = -1.0
 theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
 script = ExtResource("1_0ipts")
 
 [node name="Button" type="Button" parent="."]
