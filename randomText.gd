@@ -10,7 +10,7 @@ var arrayWithJokes = [
 	"Wie nennt man den Flur eines Iglus? – Eisdiele.",
 	"Was ist das Lieblingsessen von Models? –Laufsteaks",
 	"Heute wurde jemand mit einer Sellerie mitten auf der Straße erschlagen, war wohl jemand von den Health Angels.",
-	"Ist Kegeln mit Thomas Anders als mit Dieter Bowlen",
+	"Ist Kegeln mit Thomas Anders als mit Dieter Bohlen",
 	"Wenn sich ein Wissenschaftler ein Brötchen belegt, ist es dann wissenschaftlich belegt?",
 	"Der Kopierer rückt die Vorlage nicht mehr raus. Ist wohl ein Raubkopierer.",
 	"Letztens 'nen Typen namens Simon getroffen und er hat mir das Du angeboten. Nenne ihn ab jetzt Dumon."
